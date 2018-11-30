@@ -33,3 +33,6 @@ DEFAULT_PAGINATION = 10
 
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
+
+THEME = '/home/ROBARTS/rhaast/Dropbox/Website/pelican-themes/pelican-bootstrap3'
+#JINJA_ENVIRONMENT = {'extensions': ['jinja2.ext.i18n']}
