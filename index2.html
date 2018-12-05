@@ -28,13 +28,6 @@
       z-index: 2
     }
 
-    iframe {
-      width: 60%;
-      height: 80%;
-      border: 0;
-      background-color: rgba(0,0,0,0.3);
-    }
-
     #overlay {
         position: fixed;
         text-align: center;
@@ -119,7 +112,9 @@
   </x3d>
 </div>
 <div id="content">
+
   <body>
+    <div id="pages" onclick="off()"></div>
     <header>
       <div style="font-family: 'Montserrat', sans-serif; font-size: 80px; font-weight: bolder">ROY</div>
       <div style="font-family: 'Montserrat', sans-serif; font-size: 55px; font-weight: thin">HAAST</div>
@@ -127,13 +122,39 @@
     <nav>
       <div class="topnav">
         <a class="home" href="#">Home</a>
-        <a href="about.html" target="main">About</a>
-        <a href="example.html" target="main">Publications</a>
+        <a class="about" href="#">About</a>
+        <a class="publications" href="#">Publications</a>
       </div>
     </nav>
-    <p align="center">
-      <iframe name="main" scrolling="yes" src=""></iframe>
-    </p>
+    <iframe src="example.html"></iframe>
+
+
+    <!-- <div id="loader"></div>
+    <div id="overlay">
+      <iframe src="" scrolling="yes" frameborder="0" width=100%; height=95%; id="mainFrame" name="mainFrame"></iframe>
+      <input type="button" id="hide" value="hide"></button>
+    </div>
+    <script type="text/javascript">
+      jQuery(document).ready(function($) {
+        $(".about").click(function() {
+          $("#loader").fadeIn(10);
+          $("#overlay").delay(800).fadeIn(200);
+          $("#mainFrame").attr("src", "about.html");
+        });
+        $(".publications").click(function() {
+          $("#loader").fadeIn(10);
+          $("#overlay").delay(800).fadeIn(200);
+          $("#mainFrame").attr("src", "example.html");
+        });
+        $("#hide").click(function() {
+          $("#loader").css("display", "none");
+          $("#overlay").fadeOut(200);
+          setTimeout(function() {
+            $("#mainFrame").attr("src", "about:blank");
+          }, 250);
+        });
+      });
+    </script> -->
   </body>
 </div>
 
