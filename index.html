@@ -123,6 +123,7 @@
       <div class="topnav">
         <a class="home" href="#">Home</a>
         <a class="about" href="#">About</a>
+        <a class="publications" href="#">Publications</a>
       </div>
     </nav>
     <div id="loader"></div>
@@ -137,10 +138,10 @@
           $("#overlay").delay(800).fadeIn(200);
           $("#mainFrame").attr("src", "about.html");
         });
-        $(".other").click(function() {
+        $(".publications").click(function() {
           $("#loader").fadeIn(10);
           $("#overlay").delay(800).fadeIn(200);
-          $("#mainFrame").attr("src", "http://www.othersite.com");
+          $("#mainFrame").attr("src", "https://github.com/royhaast/bib-publication-list/blob/master/example.html");
         });
         $("#hide").click(function() {
           $("#loader").css("display", "none");
