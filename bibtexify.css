@@ -2,7 +2,6 @@
 
 body {
   font-family: 'Raleway', sans-serif;
-  font-size: small;
   color: white;
 }
 
@@ -18,7 +17,7 @@ span.undefined {
 
 .bibchart {
     width: 100%;
-    height: 30px;
+    height: 45px;
     margin-bottom: 20px;
 }
 
@@ -28,7 +27,7 @@ span.undefined {
 
 .year {
     position: relative;
-    border-bottom: 1px solid #f97f4f;
+    border-bottom: 1px dashed rgba(255,255,255,0.5);
     display: inline-block;
 }
 
@@ -99,6 +98,7 @@ span.undefined {
     text-align: center;
     width: 100%;
     font-family: 'Raleway', sans-serif;
+    font-size: small;
 }
 
 table.display thead th {
@@ -107,19 +107,28 @@ table.display thead th {
     cursor: pointer;
     cursor: hand;
     font-family: 'Raleway', sans-serif;
+    font-size: small;
+    font-style: normal;
 }
 
 table.display tfoot th {
     padding: 3px 10px;
     font-weight: bold;
+    font-family: 'Raleway', sans-serif;
+    font-size: small;
 }
 
 table.display td {
     padding: 3px 10px;
+    font-family: 'Raleway', sans-serif;
+    font-size: small;
+    font-style: normal;
 }
 
 table.display td.center {
     text-align: center;
+    font-family: 'Raleway', sans-serif;
+    font-size: small;
 }
 
 .sorting_asc {
@@ -170,8 +179,7 @@ div.bibinfo {
 }
 
 #shutter {
-    background-color: #e6e6fa;
-    opacity: 0.7;
+
     width: 100%;
     height: 100%;
     position: fixed;
@@ -220,6 +228,9 @@ div.bibinfo pre code {
 
 .dataTables_wrapper {
     margin-bottom: 20px;
+    font-family: 'Raleway', sans-serif;
+    font-style: italic;
+    font-size: small;
 }
 
 a.bibclose {
