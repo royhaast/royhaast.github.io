@@ -1,11 +1,79 @@
 <html>
-<link rel="stylesheet" href="content.css"/>
-<link rel="stylesheet" href="github-widget.css"/>
+<link rel="stylesheet" href="content.css" />
+<link rel="stylesheet" href="github-widget.css" />
+<link rel="stylesheet" type="text/css" href="timeline.css" />
+
 <body>
-<div id="text">
-  <p style="font-weight: bold">About</p>
-  Blabla
-<p style="font-weight: bold">Research</p>
+  <div id="text">
+    <p style="font-weight: bold">About</p>
+    <ul id='timeline'>
+      <li class='work'>
+        <input class='radio' id='work1' name='works' type='radio'>
+        <div class="relative">
+          <label for='work1'>BSc. Biomedical sciences</label>
+          <span class='date'>2006 - 2010</span>
+          <span class='circle'></span>
+        </div>
+        <div class='content'>
+          <p>
+            <br>From the beginning of my education and research career, I have been intrigued by neuroscience, and in particular by the combination of Magnetic Resonance Imaging (MRI) and other data modalities. It started during my Biomedical Science bachelor internships at the
+            University of New South Wales, Sydney, Australia (2009) and Radboud University (2009-2010). During these two periods, I developed my interest in neuroscience while performing in vitro molecular and ex vivo histology experiments to study
+            the neural mechanisms underlying brain plasticity.
+          </p>
+        </div>
+      </li>
+      <li class='work'>
+        <input class='radio' id='work2' name='works' type='radio'>
+        <div class="relative">
+          <label for='work2'>MSc. Medical Biology</label>
+          <span class='date'>2010 - 2013</span>
+          <span class='circle'></span>
+        </div>
+        <div class='content'>
+          <p>
+            <br>As I became fascinated by the brain, I enrolled in the neuroscience track of the Medical Biology master at Radboud University. During my first master internship at the Donders Centre for Brain Cognition and Behaviour (2011-2012), I
+            combined vivo MRI and ex vivo histological data to study brain changes in Alzheimer’s disease in a pre-clinical mouse model. In my second internship at the department of Neurology, Radboud University Medical Centre (2012-2013), I applied
+            my acquired knowledge and experience on in vivo human studies.
+            <br><br><a href="https://www.ncbi.nlm.nih.gov/pubmed/23032484" target="new">Master thesis</a>
+          </p>
+        </div>
+      </li>
+      <li class='work'>
+        <input class='radio' id='work3' name='works' type='radio'>
+        <div class="relative">
+          <label for='work3'>Graduate student</label>
+          <span class='date'>2013 - 2018</span>
+          <span class='circle'></span>
+        </div>
+        <div class='content'>
+          <p>
+            <br>Between 2013 and 2018, as PhD student at the department of Cognitive Neuroscience at Maastricht University, I continued this path and combined earlier experiences with novel, state-of-the-art MRI methods to answer
+            clinical-relevant research questions. I developed a multi-parametric ultra-high field (UHF, 7 Tesla) MRI protocol and applied it to study mitochondrial disease (35 participants) and T2DM (almost 150 participants). Specifically, I
+            combined a whole-brain approach with quantitative MRI for (1) parcellating the cortical gray matter, and (2) identification of potential biomarkers in clinical populations.
+            <br><br><a href="https://doi.org/10.26481/dis.20180627rh" target="new">Doctoral thesis</a>
+          </p>
+        </div>
+      </li>
+      <li class='work'>
+        <input class='radio' id='work4' name='works' type='radio' checked>
+        <div class="relative">
+          <label for='work4'>Post-doctoral fellow</label>
+          <span class='date'>2018 - Now</span>
+          <span class='circle'></span>
+        </div>
+        <div class='content'>
+          <p>
+            <br>At the moment I'm working as post-doctoral fellow within the Computational Neuroimaging lab of Dr. Ali Khan at Western University's Centre for
+            Functional and Metabolic Mapping and co-supervised by Dr. Stefan Kohler, head of the Memory Lab in Cognitive Neuroscience at the Brain and Mind Institute. I will continue the line of work that I started during my PhD, but with a strong emphasizes on the hippocampal formation.
+            <br><br><a href="https://www.khanlab.ca/" target="new">Khan lab</a> | <a href="https://kohlermemorylab.org/" target="new">Kohler lab</a>
+          </p>
+        </div>
+      </li>
+    </ul>
+    <p style="font-weight: bold">GitHub repositories</p>
+    <div style="font-size: small" class="github-widget" data-user="royhaast" data-options='{"forks":true}'></div>
+  </div>
+  <p style="font-weight: bold">Research</p>
   <table>
     <col width="20%">
     <col width="20%">
@@ -31,29 +99,27 @@
     </tr>
   </table>
   <p style="font-weight: bold">Education</p>
-    <table>
-      <col width="20%">
-      <col width="50%">
-      <col width="30%">
-      <tr>
-        <th>Period</th>
-        <th>Program</th>
-        <th>Institute</th>
-      </tr>
-      <tr>
-        <td>Sep 2010 &#8212; Aug 2013</td>
-        <td>MSc. Medical Biology<br><span style="color: #777">Neuroscience track</span></td>
-        <td>Radboud University<br><span style="color: #777">Nijmegen, Netherlands</span></td>
-      </tr>
-      <tr>
-        <td>Sep 2006 &#8212; Aug 2010</td>
-        <td>BSc. Applied Biomedical Sciences</td>
-        <td>Avans University of Applied Sciences<br><span style="color: #777">Breda, Netherlands</span></td>
-      </tr>
-    </table>
-<p style="font-weight: bold">GitHub repositories</p>
-<div style="font-size: small" class="github-widget" data-user="royhaast" data-options='{"forks":true}'></div>
-</div>
+  <table>
+    <col width="20%">
+    <col width="50%">
+    <col width="30%">
+    <tr>
+      <th>Period</th>
+      <th>Program</th>
+      <th>Institute</th>
+    </tr>
+    <tr>
+      <td>Sep 2010 &#8212; Aug 2013</td>
+      <td>MSc. Medical Biology<br><span style="color: #777">Neuroscience track</span></td>
+      <td>Radboud University<br><span style="color: #777">Nijmegen, Netherlands</span></td>
+    </tr>
+    <tr>
+      <td>Sep 2006 &#8212; Aug 2010</td>
+      <td>BSc. Applied Biomedical Sciences</td>
+      <td>Avans University of Applied Sciences<br><span style="color: #777">Breda, Netherlands</span></td>
+    </tr>
+  </table>
 </body>
 <script src="github-widget.min.js"></script>
+
 </html>

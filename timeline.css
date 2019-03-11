@@ -1,0 +1,146 @@
+/* -------------------------------------
+ * For horizontal version, set the
+ * $vertical variable to false
+ * ------------------------------------- */
+/* -------------------------------------
+ * General Style
+ * ------------------------------------- */
+h2 {
+  margin: 3em 0 0 0;
+  font-size: 1em;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* -------------------------------------
+ * timeline
+ * ------------------------------------- */
+#timeline {
+  list-style: none;
+  margin: 60px 10px 0;
+  padding: 0;
+  border-top: 2px solid #eee9dc;
+  display: table;
+  border-spacing: 20px 0;
+}
+#timeline li {
+  display: table-cell;
+}
+#timeline li .relative {
+  position: relative;
+}
+#timeline p {
+  margin: 0 0 0;
+}
+
+.date {
+  text-align: center;
+  top: -45px;
+  left: 0;
+  right: 0;
+  font-size: 0.95em;
+  line-height: 20px;
+  position: absolute;
+}
+
+.circle {
+  margin: 0 auto;
+  top: -10px;
+  left: 0;
+  right: 0;
+  width: 10px;
+  height: 10px;
+  background: #48b379;
+  border: 2px solid #eee9dc;
+  border-radius: 50%;
+  display: block;
+  position: absolute;
+}
+
+.content {
+  width: 150px;
+  max-height: 0;
+  margin-top: 40px;
+  vertical-align: top;
+  padding: 25px 15px 15px;
+  transition: width 0.4s linear, max-height 0.4s linear;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 0.5em;
+  border-color: rgba(255,255,255, 0.3);
+  line-height: 1em;
+  background-color: rgba(0,0,0,0.2);
+  position: relative;
+}
+.content:before, .content:after {
+  content: "";
+  width: 0;
+  height: 0;
+  border: solid transparent;
+  position: absolute;
+  pointer-events: none;
+  bottom: 100%;
+}
+.content:before {
+  border-bottom-color: inherit;
+  border-width: 15px;
+  left: 50%;
+  margin-left: -15px;
+}
+.content:after {
+  border-bottom-color: transparent;
+  border-width: 12px;
+  left: 50%;
+  margin-left: -12px;
+}
+.content p {
+  max-height: 0;
+  font-size: small;
+  color: transparent;
+  text-align: justify;
+  word-break: break-word;
+  hyphens: auto;
+  overflow: hidden;
+}
+
+label {
+  font-size: 0.8em;
+  font-weight: bold;
+  position: absolute;
+  z-index: 100;
+  cursor: pointer;
+  width: 100%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: block;
+  top: 50px;
+  left: 15px;
+}
+
+.radio {
+  display: none;
+}
+
+.radio:checked + .relative label {
+  cursor: auto;
+  width: 400px;
+  transition: width 0.3s linear 0.2s;
+}
+.radio:checked + .relative .circle {
+  background: #f98262;
+}
+.radio:checked ~ .content {
+  max-height: 250px;
+  border-color: #eee9dc;
+  width: 400px;
+}
+.radio:checked ~ .content p {
+  max-height: 250px;
+  color: #eee9dc;
+  transition: color 0.3s linear 0.3s;
+}
+
+/* -------------------------------------
+ * mobile phones (vertical version only)
+ * ------------------------------------- */

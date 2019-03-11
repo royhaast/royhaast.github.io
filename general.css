@@ -20,6 +20,7 @@
 
 iframe {
   width: 60%;
+  min-width: 1125px;
   height: 70%;
   margin: 0px;
   border: 0;
