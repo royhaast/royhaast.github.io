@@ -1,0 +1,37 @@
+<html>
+<style>
+@import url('https://fonts.googleapis.com/css?family=Raleway:300');
+#text {
+  font-family: "Raleway", sans-serif;
+  font-size: large;
+  font-weight: bold;
+  color: white;
+  padding: 5px;
+  background-color: rgba(0,0,0,0.3);
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+@media screen and (min-width: 601px) {
+  div.text {
+    font-size: 55px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  div.text {
+    font-size: 30px;
+  }
+}
+
+</style>
+<div id="text">
+  Welcome! Use menu to navigate.
+</div>
+</html>

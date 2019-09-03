@@ -1,0 +1,202 @@
+<html>
+<style>
+  @import url('https://fonts.googleapis.com/css?family=Raleway:300');
+
+  body {
+    font-family: "Raleway", sans-serif;
+    color: white;
+    font-size: small;
+    margin-top: 70px;
+  }
+
+  table {
+    border: 0;
+    border-collapse: collapse;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    table-layout: fixed;
+    font-size: small;
+  }
+
+  table thead {
+    background-color: #fc4f02;
+    border-bottom: 1px solid rgba(255, 255, 255, .5);
+  }
+
+  table tr {
+    padding: .35em;
+  }
+
+  tr:nth-child(even) {
+    background-color: rgba(56, 56, 56, 0.2);
+  }
+
+  tr:nth-child(odd) {
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+
+  table th,
+  table td {
+    padding: .625em;
+    text-align: left;
+    vertical-align: top;
+  }
+
+  table th {
+    letter-spacing: .1em;
+    text-transform: uppercase;
+  }
+
+  @media screen and (max-width: 600px) {
+    table {
+      border: 0;
+      color: black;
+    }
+
+    table thead {
+      border: none;
+      clip: rect(0 0 0 0);
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      width: 1px;
+    }
+
+    table tr {
+      border-bottom: 3px solid #fc4f02;
+      display: block;
+      margin-bottom: .625em;
+    }
+
+    tr:nth-child(even) {
+      background-color: white;
+    }
+
+    tr:nth-child(odd) {
+      background-color: white;
+    }
+
+    table td {
+      display: block;
+      font-size: .8em;
+      text-align: right;
+    }
+
+    table td::before {
+      content: attr(data-label);
+      float: left;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    table td:last-child {
+      border-bottom: 0;
+    }
+  }
+
+  .patreon {
+    width: 133px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    color: white;
+    font-size: 0.9em;
+    font-weight: bold;
+    text-align: center;
+    background-color: rgb(90, 107, 118);
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .12), 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+
+  .patreon__container {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .patreon__link {
+    text-decoration: underline;
+    color: #ff4242;
+  }
+</style>
+
+<body>
+  <p style="font-weight: bold">Research experience</p>
+  <table>
+    <thead>
+      <tr>
+        <th scope="col">Period</th>
+        <th scope="col">Position</th>
+        <th scope="col">Institute</th>
+        <th scope="col">Supervisor(s)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td data-label="Period">Oct 2018 &#8212; Now</td>
+        <td data-label="Position">Postdoctoral fellow</td>
+        <td data-label="Institute">University of Western Ontario, Robarts Research Institute, Centre for Functional and Metabolic Mapping<br>London, ON, Canada</td>
+        <td data-label="Supervisor(s)">Dr. Ali R. Khan<br>Dr. Stefan Kohler</td>
+      </tr>
+      <tr>
+        <td scope="row" data-label="Period">Oct 2013 &#8212; Jun 2018</td>
+        <td data-label="Position">Graduate student</td>
+        <td data-label="Institute">Maastricht University, Department of Cognitive Neuroscience & Maastricht Centre for Systems Biology<br>Maastricht, Netherlands</td>
+        <td data-label="Supervisor(s)">Prof. Kamil Uludag<br>Prof. Elia Formisano<br>Dr. Jacobus F. Jansen</td>
+      </tr>
+      </tr>
+    </tbody>
+  </table>
+  <p style="font-weight: bold">Funding</p>
+  <table>
+    <thead>
+      <tr>
+        <th scope="col">Period</th>
+        <th scope="col">Organization</th>
+        <th scope="col">Program</th>
+        <th scope="col">Title</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td data-label="Period">Mar 2019 &#8212; Now</td>
+        <td data-label="Position">BrainsCAN</td>
+        <td data-label="Institute"><a href="https://brainscan.uwo.ca/programs/postdoctoral_fellowship_program/index.html" target="new">Postdoctoral fellowship</a></td>
+        <td data-label="Supervisor(s)">Hippocampal subregion characterization using vascular ultra-high field MRI</td>
+      </tr>
+    </tbody>
+  </table>
+  <p style="font-weight: bold">Education</p>
+  <table>
+    <thead>
+      <tr>
+        <th scope="col">Period</th>
+        <th scope="col">Program</th>
+        <th scope="col">Institute</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td data-label="Period">Sep 2010 &#8212; Aug 2013</td>
+        <td data-label="Program">MSc. Medical Biology<br>Neuroscience track</td>
+        <td data-label="Institute">Radboud University<br>Nijmegen, Netherlands</td>
+      </tr>
+      <tr>
+        <td scope="row" data-label="Period">Sep 2006 &#8212; Aug 2010</td>
+        <td data-label="Program">BSc. Applied Biomedical Sciences</td>
+        <td data-label="Institute">Avans University of Applied Sciences<br>Breda, Netherlands</td>
+      </tr>
+      </tr>
+    </tbody>
+  </table>
+  <div class="patreon font">
+    <div class="patreon__container">
+      <span class="patreon__msg">Research &<br>Education</span>
+    </div>
+  </div>
+</body>
+
+</html>

@@ -1,33 +1,31 @@
 <!doctype html>
 <html>
-  <head>
-  <link href="https://fonts.googleapis.com/css?family=Barlow&display=swap" rel="stylesheet">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.2.8/d3.min.js" type="text/JavaScript"></script>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel='stylesheet' type='text/css'>
-    <style>
-			html {
-					height: 100%;
 
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Barlow&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel='stylesheet' type='text/css'>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.2.8/d3.min.js" type="text/JavaScript"></script>
+  <style>
+    html {
+					height: 100%;
+          background: none transparent;
 			}
 			body {
 					height: 100%;
 					margin: 0;
-					background-repeat: no-repeat;
-					background-attachment: fixed;
-          background: rgb(228,228,228);
-          background: linear-gradient(0deg, rgba(244,244,244,1) 0%, rgba(255,255,255,1) 100%);
+          background: none transparent;
 			}
       text {
         font-size: 14px;
         text-anchor: middle;
-        fill: black;
+        fill: white;
       }
       g > text.active {
         font-size: 30px;
       }
       circle {
-				fill: white;
-				stroke: black;
+				fill: transparent;
+				stroke: #fc4f02;
 				stroke-width: 2px;
       }
 
@@ -35,7 +33,7 @@
 				font-size: 12px;
 				text-align: center;
         text-anchor: middle;
-				color: black;
+				color: white;
 			}
 
       div.tooltip {
@@ -55,167 +53,177 @@
 				font-size: 26px;
 			}
 
-			#header {
-        font-family: 'Barlow', sans-serif;
-				background-color: #E4572E;
-				font-size: 36px;
-        font-weight: bold;
-				width: 100%;
-			}
-
-      #subheader {
-        font-family: 'Barlow', sans-serif;
-				background-color: #c4e3f3;
-				font-size: 28px;
-				width: 100%;
-			}
-
-      .footer {
-        font-family: 'Barlow', sans-serif;
-				font-size: 22px;
-        display: table-cell;
-        position: absolute;
-        height: 35px;
-        bottom: 0px;
-        width: 100%;
-        background-color: #A8C686;
+      .button {
+        background-color: #fc4f02;
+        border: none;
+        color: white;
+        padding: 5px 10px;
         text-align: center;
-        vertical-align: middle;
+        text-decoration: none;
+        display: inline-block;
       }
+
+      @media screen and (max-width: 400px) {
+        #viz {
+          display: none;
+        }
+      }
+
+      ::-webkit-scrollbar {
+          width: 10px;
+    }
+
+      ::-webkit-scrollbar-track {
+          background: rgba(0,0,0,0.3);
+    }
+
+      ::-webkit-scrollbar-thumb {
+          background: #888;
+    }
+
+      ::-webkit-scrollbar-thumb:hover {
+          background: #555;
+    }
 	</style>
-  </head>
-  <body>
-		<div id="header">Khan Computational Imaging Lab</div>
-    <div id="subheader"><img width="75" height="50" src="eyeglasses.svg">Reading list</div>
-    <div id="viz"><svg style="width:500px;height:100px;"></svg></div>
-		<div id="paperDiv" style="height:0px">
-      <span style="font-weight:bold"><text id="titleSvg"></text></span><br>
-      <span style="font-style:italic"><text id="authorSvg"></text></span>
-      <br><br>
-      <text id="abstractSvg" style="height:0px;"></text>
-      <br><br>
-    </div>
-  		<div>
-  			<form action="https://formspree.io/rhaast@uwo.ca" method="POST"/>
-  				Suggest a paper:<input type="text" name="name" placeholder="Your name">
-  				<input type="email" name="email" placeholder="Your e-mail">
-  				<input type="text" name="URL" placeholder="Link to paper">
-  				<input type="submit" name="submit" value="Submit">
-  			</form>
-      </div>
-		<iframe id="table" src="table.html" style="width:100%;height:330px" allowtransparency="true" frameBorder="0"></iframe>
-    <div class="footer">&copy; 2019 by Roy Haast | Visit <a href="http://www.khanlab.ca" target="blank">khanlab.ca</a></div>
-		<script>
-			var file = 'readinglist.csv' + '?' + Math.floor(Math.random() * 1000)
-			d3.csv(file, data => listViz(data));
-					function listViz(data) {
-						d3.select("svg")
-							.append("g")
-								.attr("id", "listG")
-								.attr("transform", "translate(50,40)")
-							.selectAll("g")
-							.data(data)
-							.enter()
-							.append("g")
-								.attr("class", "paperG")
-								.attr("transform", (d, i) =>`translate(${(i * 100)}, 0)`);
+</head>
 
-						var papersG = d3.selectAll("g.paperG");
-						var paperDiv = d3.select("#paperDiv");
-						var titleSvg = d3.select("#titleSvg");
-						var authorSvg = d3.select("#authorSvg");
-						var abstractSvg = d3.select("#abstractSvg");
+<body>
+  <div id="viz"><svg style="width:500px;height:100px;"></svg></div>
+  <div id="paperDiv" style="height:0px">
+    <span style="font-weight:bold"><text id="titleSvg"></text></span><br>
+    <span style="font-style:italic"><text id="authorSvg"></text></span>
+    <br><br>
+    <text id="abstractSvg" style="height:0px"></text>
+  </div>
+  <div style="margin-bottom: 20px">
+    <form action="https://formspree.io/rhaast@uwo.ca" method="POST" />
+    Suggest a paper: <input type="text" name="name" placeholder="Your name">
+    <input type="email" name="email" placeholder="Your e-mail">
+    <input type="text" name="URL" placeholder="Link to paper">
+    <input type="submit" class="button" name="submit" value="Submit">
+    </form>
+  </div>
+  <iframe id="table" src="table.html" style="width:100%;height:450px;border:0;" allowtransparency="true" frameBorder="0"></iframe>
+  <script>
+    var file = 'readinglist.csv' + '?' + Math.floor(Math.random() * 1000)
+    d3.csv(file, data => listViz(data));
 
-						papersG
-							.append("a")
-								.attr("xlink:href", function(d) { return d.url; })
-								.attr("target","_blank")
-                .attr("title","Navigate to paper")
-							.append("circle")
-								.on("mouseover", function(d) {
-										paperDiv
-											.transition()
-												.duration(400)
-												.style("height", this.getBBox().widht);
-										titleSvg
-											.text(d.title)
-											.style("text-anchor", "middle")
-											.style("font-size", "20px")
-											.style("opacity", 0)
-											.transition()
-												.delay(400)
-												.duration(400)
-												.style("opacity", 1)
-											.attr("y", 20);
-                    authorSvg
-											.text(d.allauthors + " (" + d.year + ")")
-											.style("text-anchor", "middle")
-											.style("opacity", 0)
-											.transition()
-												.delay(400)
-												.duration(400)
-												.style("opacity", 1)
-											.attr("y", 20);
-										abstractSvg
-											.text(d.abstract)
-											.style("opacity", 0)
-											.transition()
-												.delay(400)
-												.duration(400)
-												.style("opacity", 1)
-											.attr("y", 20)
-										d3.select(this)
-											.transition()
-												.duration(400)
-												.style("fill", "black")
-								})
-								.on("mouseout", function(d) {
-										paperDiv
-											.transition()
-												.duration(400)
-												.style("height", "0px")
-								    titleSvg
-											.transition()
-							        	.duration(400)
-												.style("height", "0px")
-												.style("opacity", 0)
-											.text("")
-                    authorSvg
-											.transition()
-							        	.duration(400)
-												.style("height", "0px")
-												.style("opacity", 0)
-											.text("")
-								    abstractSvg
-											.transition()
-							        	.duration(400)
-												.style("height", "0px")
-												.style("opacity", 0)
-											.text("")
-										d3.select(this)
-											.transition()
-												.duration(400)
-												.style("fill", "white")
-									})
-								.attr("r", 20)
-								.style("opacity",0)
-								.transition()
-									.delay((d,i) => i * 100)
-									.duration(500)
-									.style("opacity", 1)
+    function listViz(data) {
+      d3.select("svg")
+        .append("g")
+        .attr("id", "listG")
+        .attr("transform", "translate(50,40)")
+        .selectAll("g")
+        .data(data)
+        .enter()
+        .append("g")
+        .attr("class", "paperG")
+        .attr("transform", (d, i) => `translate(${(i * 100)}, 0)`);
 
+      var papersG = d3.selectAll("g.paperG");
+      var paperDiv = d3.select("#paperDiv");
+      var titleSvg = d3.select("#titleSvg");
+      var authorSvg = d3.select("#authorSvg");
+      var abstractSvg = d3.select("#abstractSvg");
 
-						papersG
-							.append("text").attr("opacity", 0)
-								.style("text-anchor", "middle")
-								.style("font-style", "italic")
-								.attr("y", 35)
-								.text(d => d.authors)
-								.transition()
-									.delay((d,i) => i * 100)
-									.duration(400)
-									.attr("opacity", 1);
-					}
-		</script>
-  </body>
+      papersG
+        .append("a")
+        .attr("xlink:href", function(d) {
+          return d.url;
+        })
+        .attr("target", "_blank")
+        .attr("title", "Navigate to paper")
+        .append("circle")
+        .on("mouseover", function(d, i) {
+          paperDiv
+            .transition()
+            .duration(400)
+            .style("background-color", "rgba(56,56,56,0.2)")
+            .style("height", this.getBBox().widht);
+          titleSvg
+            .text(d.title)
+            .style("text-anchor", "middle")
+            .style("font-size", "20px")
+            .style("fill", 0)
+            .transition()
+            .delay(400)
+            .duration(400)
+            .style("opacity", 1)
+            .attr("y", 20);
+          authorSvg
+            .text(d.allauthors + " (" + d.year + ")")
+            .style("text-anchor", "middle")
+            .style("opacity", 0)
+            .transition()
+            .delay(400)
+            .duration(400)
+            .style("opacity", 1)
+            .attr("y", 20);
+          abstractSvg
+            .html(d.abstract + '<br><br>')
+            .style("opacity", 0)
+            .transition()
+            .delay(400)
+            .duration(400)
+            .style("opacity", 1)
+            .attr("y", 20)
+          d3.select(this)
+            .transition()
+            .duration(400)
+            .style("fill", "rgba(252, 79, 2, 1)")
+          d3.select('#author' + i)
+            .style("fill", "rgba(252, 79, 2, 1)");
+        })
+        .on("mouseout", function(d, i) {
+          paperDiv
+            .transition()
+            .duration(400)
+            .style("height", "0px")
+          titleSvg
+            .transition()
+            .duration(400)
+            .style("height", "0px")
+            .style("opacity", 0)
+            .text("")
+          authorSvg
+            .transition()
+            .duration(400)
+            .style("height", "0px")
+            .style("opacity", 0)
+            .text("")
+          abstractSvg
+            .transition()
+            .duration(400)
+            .style("height", "0px")
+            .style("opacity", 0)
+            .text("")
+          d3.select(this)
+            .transition()
+            .duration(400)
+            .style("fill", "transparent")
+          d3.select('#author' + i)
+            .style("fill", "white");
+        })
+        .attr("r", 20)
+        .style("opacity", 0)
+        .transition()
+        .delay((d, i) => i * 100)
+        .duration(500)
+        .style("opacity", 1)
+
+      papersG
+        .append("text").attr("opacity", 0)
+        .attr('id', (d, i) => 'author' + i)
+        .style("text-anchor", "middle")
+        .style("font-style", "italic")
+        .attr("y", 35)
+        .text(d => d.authors)
+        .transition()
+        .delay((d, i) => i * 100)
+        .duration(400)
+        .attr("opacity", 1);
+    }
+  </script>
+</body>
+
 </html>
