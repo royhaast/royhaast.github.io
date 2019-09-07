@@ -1,21 +1,19 @@
-<!doctype html>
-</body>
-</html>
 <html>
-	<head>
-		<title>Testing bibtex</title>
-		<link rel="stylesheet" href="bibtexify.css"/>
-	</head>
-	<body>
-    <noscript>
-      <!-- bibtex source hidden by default, show it if JS disabled -->
-      <style>
-      #bibtex { display: block;}
-      </style>
-    </noscript>
-		<div id="text">
+
+<head>
+	<title>Publications</title>
+	<link rel="stylesheet" href="bibtexify.css" />
+</head>
+
+<body>
+	<noscript>
+		<style>
+			#bibtex { display: block;}
+    </style>
+	</noscript>
+	<div id="text">
 		<table id="pubTable" class="display"></table>
-        <pre id="bibtex" style="display:none;">
+		<pre id="bibtex" style="display:none;">
 					@article{Kneppers2019,
 					author = {Kneppers, Anita E.M. and Haast, Roy A.M. and Langen, Ramon C.J. and Verdijk, Lex B. and Leermakers, Pieter A. and Gosker, Harry R. and van Loon, Luc J.C. and Lainscak, Mitja and Schols, Annemie M.W.J.},
 					doi = {10.1002/jcsm.12370},
@@ -300,28 +298,32 @@
 					author = {Haast, Roy A.M. and Valente, Giancarlo and Uludag, Kamil},
 					booktitle = {Proceedings of the 25th annual meeting of Organization for Human Brain Mapping},
 					pages = {xx},
-					title = {{A simulation framework for validating surface-based cortical parcellation methods}}
+					title = {{A simulation framework for validating surface-based cortical parcellation methods}},
+					year = {2019}
 					}
 					@inproceedings{Ivanov2019,
 					address = {Montreal, Quebec, Canada},
 					author = {Ivanov, Dimo and Haast, Roy A.M. and Desmond-Kennedy, Muriel and Poser, Benedikt A. and Uludag, Kamil},
 					booktitle = {Proceedings of the 27th annual meeting of International Society for Magnetic Resonance in Medicine},
 					pages = {xx},
-					title = {{Investigating the T1 of human venous blood a 7T in patients with diabetes, metabolic syndrome and healthy subjects}}
+					title = {{Investigating the T1 of human venous blood a 7T in patients with diabetes, metabolic syndrome and healthy subjects}},
+					year = {2019}
 					}
 					@inproceedings{Haast2019a,
 					address = {London, ON, Canada},
 					author = {Haast, Roy A.M. and Ivanov, Dimo and DeKraker, Jordan and Kashyap, Sriranga and Janssens, Shanice C.E.W. and Poser, Benedikt A. and Khan, Ali R. and Uludag, Kamil},
 					booktitle = {Proceedings of the 17th annual meeting of Imaging Network Ontario},
 					pages = {xx},
-					title = {{Sub-millimeter blood flow mapping of cortical and hippocampal gray matter}}
+					title = {{Sub-millimeter blood flow mapping of cortical and hippocampal gray matter}},
+					year = {2019}
 					}
 					@inproceedings{Haast2019b,
 					address = {Montreal, Quebec, Canada},
 					author = {Haast, Roy A.M. and Ivanov, Dimo and DeKraker, Jordan and Kashyap, Sriranga and Janssens, Shanice C.E.W. and Poser, Benedikt A. and Khan, Ali R. and Uludag, Kamil},
 					booktitle = {Proceedings of the 27th annual meeting of International Society for Magnetic Resonance in Medicine},
 					pages = {xx},
-					title = {{Sub-millimeter blood flow mapping of cortical and hippocampal gray matter}}
+					title = {{Sub-millimeter blood flow mapping of cortical and hippocampal gray matter}},
+					year = {2019}
 					}
 					@PhdThesis{Haast:Doctoral,,
 					author = {Haast, Roy A. M.},
@@ -339,13 +341,17 @@
 					type =	 {Licentiate's },
 					year = {2012}
 					}
-</pre></div>
-  	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-		<script type="text/javascript" src="https://github.com/royhaast/royhaast.github.io/blob/master/build/bib-list.js"></script>
-		<script type="text/javascript">
-		    $(document).ready(function() {
-        	bibtexify("#bibtex", "pubTable", {'tweet': 'vkaravir'});
-    		});
-		</script>
-	</body>
+</pre>
+	</div>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script type="text/javascript" src="build/bib-list.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			bibtexify("#bibtex", "pubTable", {
+				'tweet': 'vkaravir'
+			});
+		});
+	</script>
+</body>
+
 </html>

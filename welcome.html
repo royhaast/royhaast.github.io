@@ -1,21 +1,26 @@
 <html>
 <style>
-@import url('https://fonts.googleapis.com/css?family=Raleway:300');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,900|Raleway:300');
+
 #text {
   font-family: "Raleway", sans-serif;
   font-size: large;
-  font-weight: bold;
   color: white;
   padding: 5px;
-  background-color: rgba(0,0,0,0.3);
   text-align: center;
   position: absolute;
+  width: 300px;
+  line-height: 1.5em;
   top: 50%;
   left: 50%;
   -moz-transform: translateX(-50%) translateY(-50%);
   -webkit-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+#text>span {
+    background-color: rgba(0,0,0,0.3);
+    box-shadow: 10px 0 0px 0px rgba(0,0,0,0.3), -10px 0 0px 0px rgba(0,0,0,0.3);
 }
 
 @media screen and (min-width: 601px) {
@@ -32,6 +37,8 @@
 
 </style>
 <div id="text">
-  Welcome! Use menu to navigate.
+  <span style="font-weight:bold">Hi, I'm Roy.</span><br><br>
+  <span>I'm a neuroimaging researcher working at Western University, London, Ontario, Canada.<br><br>
+  Here you can find my online resume.</span>
 </div>
 </html>

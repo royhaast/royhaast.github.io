@@ -4,87 +4,8 @@
 <head>
   <link href="https://fonts.googleapis.com/css?family=Barlow&display=swap" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="readinglist.css"></link>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.2.8/d3.min.js" type="text/JavaScript"></script>
-  <style>
-    html {
-					height: 100%;
-          background: none transparent;
-			}
-			body {
-					height: 100%;
-					margin: 0;
-          background: none transparent;
-			}
-      text {
-        font-size: 14px;
-        text-anchor: middle;
-        fill: white;
-      }
-      g > text.active {
-        font-size: 30px;
-      }
-      circle {
-				fill: transparent;
-				stroke: #fc4f02;
-				stroke-width: 2px;
-      }
-
-			div {
-				font-size: 12px;
-				text-align: center;
-        text-anchor: middle;
-				color: white;
-			}
-
-      div.tooltip {
-        position: absolute;
-        text-align: center;
-        width: 120px;
-        height: 25px;
-        padding: 5px;
-        background: #c4e3f3;
-        border: 0px;
-        border-radius: 8px;
-      }
-
-			#titleSvg {
-        font-family: 'Barlow', sans-serif;
-        font-weight: bold;
-				font-size: 26px;
-			}
-
-      .button {
-        background-color: #fc4f02;
-        border: none;
-        color: white;
-        padding: 5px 10px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-      }
-
-      @media screen and (max-width: 400px) {
-        #viz {
-          display: none;
-        }
-      }
-
-      ::-webkit-scrollbar {
-          width: 10px;
-    }
-
-      ::-webkit-scrollbar-track {
-          background: rgba(0,0,0,0.3);
-    }
-
-      ::-webkit-scrollbar-thumb {
-          background: #888;
-    }
-
-      ::-webkit-scrollbar-thumb:hover {
-          background: #555;
-    }
-	</style>
 </head>
 
 <body>

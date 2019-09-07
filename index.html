@@ -3,11 +3,10 @@
 <head>
   <title>Roy Haast</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script type='text/javascript' src='https://www.x3dom.org/download/x3dom.js'> </script>
-  <link rel='stylesheet' type='text/css' href='https://www.x3dom.org/download/x3dom.css'>
-  </link>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  </link>
+  <script type='text/javascript' src='https://www.x3dom.org/download/x3dom.js'></script>
+  <link rel='stylesheet' type='text/css' href='https://www.x3dom.org/download/x3dom.css'></link>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
+  <link rel="stylesheet" href="general.css"></link>
   <script>
     function myFunction() {
       var x = document.getElementById("myTopnav");
@@ -19,223 +18,6 @@
     }
   </script>
 </head>
-<style>
-  @import url('https://fonts.googleapis.com/css?family=Montserrat:300,900|Raleway:300');
-
-  html,
-  body {
-    max-height: 100%;
-    width: 100%;
-    padding: 0;
-    margin: auto;
-    background: #18202d;
-    /*background-image: url("photo.png");*/
-    /*background-position: center;*/
-    /*background-repeat: no-repeat;*/
-    color: #5a6b76;
-    font-family: 'Raleway', sans-serif;
-    vertical-align: middle;
-  }
-
-  #brain-container {
-    width: 100%;
-    position: fixed;
-    z-index: 1;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    -webkit-transform: translate(-50%, -50%);
-  }
-
-  #brain {
-    width: 100%;
-    height: 100%;
-  }
-
-  #photo {
-    z-index: 2;
-  }
-
-  #content {
-    height: 100%;
-    width: 100%;
-    margin: auto;
-    /*max-width: 960px;*/
-    position: relative;
-    z-index: 2;
-  }
-
-  iframe {
-    width: 100%;
-    max-width: 960px;
-    height: calc(100% - 82px);
-    margin: 0 auto;
-    border: 0;
-    background-color: transparent;
-    display: block;
-  }
-
-  @media screen and (min-width: 401px) {
-    div.title {
-      font-size: 55px;
-      max-height: 1000px;
-    }
-  }
-
-  @media screen and (max-width: 400px) {
-    div.title {
-      font-size: 55px;
-      max-height: 300px;
-    }
-  }
-
-  .border-sides {
-    border-left: 1px solid #5a6b76;
-    border-right: 1px solid #5a6b76;
-  }
-
-  .border-bottom {
-    border-bottom: 1px solid #fc4f02;
-  }
-
-  .text-outline {
-    color: transparent;
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: #fc4f02;
-  }
-
-  .topnav {
-    overflow: hidden;
-    background-color: #18202d;
-  }
-
-  .topnav a {
-    float: left;
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-  }
-
-  .active {
-    background-color: #fc4f02;
-    color: white;
-  }
-
-  .topnav .icon {
-    display: none;
-  }
-
-  .dropdown {
-    float: left;
-    overflow: hidden;
-  }
-
-  .dropdown .dropbtn {
-    font-size: 17px;
-    border: none;
-    outline: none;
-    color: white;
-    padding: 14px 16px;
-    background-color: inherit;
-    font-family: inherit;
-    margin: 0;
-  }
-
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-  }
-
-  .dropdown-content a {
-    float: none;
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-  }
-
-  .topnav a:hover,
-  .dropdown:hover .dropbtn {
-    background-color: #5a6b76;
-    color: white;
-    transition: 0.3s;
-  }
-
-  .dropdown-content a:hover {
-    background-color: #ddd;
-    color: black;
-  }
-
-  .dropdown:hover .dropdown-content {
-    display: block;
-  }
-
-  @media screen and (max-width: 600px) {
-
-    .topnav a:not(:first-child),
-    .dropdown .dropbtn {
-      display: none;
-    }
-
-    .topnav a.icon {
-      float: right;
-      display: block;
-    }
-  }
-
-  @media screen and (max-width: 600px) {
-    .topnav.responsive {
-      position: relative;
-    }
-
-    .topnav.responsive .icon {
-      position: absolute;
-      right: 0;
-      top: 0;
-    }
-
-    .topnav.responsive a {
-      float: none;
-      display: block;
-      text-align: left;
-    }
-
-    .topnav.responsive .dropdown {
-      float: none;
-    }
-
-    .topnav.responsive .dropdown-content {
-      position: relative;
-    }
-
-    .topnav.responsive .dropdown .dropbtn {
-      display: block;
-      width: 100%;
-      text-align: left;
-    }
-  }
-
-  .footer {
-    position: fixed;
-    padding: 5px;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: #fc4f02;
-    color: white;
-    text-align: center;
-  }
-</style>
-
 <body>
   <div id="brain-container">
     <x3d id="brain">
@@ -259,7 +41,6 @@
         </transform>
         <timeSensor DEF='clock' cycleInterval='30' loop='true'></timeSensor>
         <orientationInterpolator DEF='spinThings' key='0 0.25 0.5 0.75 1' keyValue='0 0 1 0  0 0 1 -1.57079  0 0 1 -3.14159  0 0 1 -4.71239  0 0 1 -6.28319'></orientationInterpolator>
-
       </scene>
     </x3d>
   </div>
@@ -274,9 +55,9 @@
           <i class="fa fa-caret-down"></i>
         </button>
         <div class="dropdown-content">
-          <a href="timeline.html" target="main">Timeline</a>
-          <a href="research.html" target="main">Research & Education</a>
-          <a href="repositories.html" target="main">Repositories</a>
+          <a href="about/timeline.html" target="main">Timeline</a>
+          <a href="about/research.html" target="main">Research & Education</a>
+          <a href="about/repositories.html" target="main">Repositories</a>
         </div>
       </div>
       <div class="dropdown">
@@ -289,21 +70,21 @@
           <a href="about:blank" target="main">Imaging genetics</a>
         </div>
       </div>
-      <a href="publications.html" target="main">Output</a>
+      <a href="bibliography/publications.html" target="main">Output</a>
       <div class="dropdown">
         <button class="dropbtn">Widgets
           <i class="fa fa-caret-down"></i>
         </button>
         <div class="dropdown-content">
-          <a href="list.html" target="main">Reading list</a>
+          <a href="widgets/readinglist/readinglist.html" target="main">Reading list</a>
         </div>
       </div>
       <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
     </div>
     <iframe name="main" scrolling="yes" fameborder="0" src="welcome.html" align="middle"></iframe>
     <div class="footer">
-      <a href="http://github.com/royhaast" target="new"><img src="github.svg" height="20" width="20" /></a>
-      <a href="http://github.com/royhaast" target="new"><img src="twitter.svg" height="20" width="20" /></a>
+      <a href="http://github.com/royhaast" target="new"><img src="images/github.svg" height="20" width="20" /></a>
+      <a href="http://github.com/royhaast" target="new"><img src="images/twitter.svg" height="20" width="20" /></a>
     </div>
 </body>
 

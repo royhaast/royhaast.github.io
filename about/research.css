@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:300');
+
+body {
+  font-family: "Raleway", sans-serif;
+  color: white;
+  font-size: small;
+  margin-top: 70px;
+}
+
+table {
+  border: 0;
+  border-collapse: collapse;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  table-layout: fixed;
+  font-size: small;
+}
+
+table thead {
+  background-color: #fc4f02;
+  border-bottom: 1px solid rgba(255, 255, 255, .5);
+}
+
+table tr {
+  padding: .35em;
+}
+
+tr:nth-child(even) {
+  background-color: rgba(56, 56, 56, 0.2);
+}
+
+tr:nth-child(odd) {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+table th,
+table td {
+  padding: .625em;
+  text-align: left;
+  vertical-align: top;
+}
+
+table th {
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 600px) {
+  table {
+    border: 0;
+    color: black;
+  }
+
+  table thead {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+
+  table tr {
+    border-bottom: 3px solid #fc4f02;
+    display: block;
+    margin-bottom: .625em;
+  }
+
+  tr:nth-child(even) {
+    background-color: white;
+  }
+
+  tr:nth-child(odd) {
+    background-color: white;
+  }
+
+  table td {
+    display: block;
+    font-size: .8em;
+    text-align: right;
+  }
+
+  table td::before {
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  table td:last-child {
+    border-bottom: 0;
+  }
+}
+
+.patreon {
+  width: 133px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  color: white;
+  font-size: 0.9em;
+  font-weight: bold;
+  text-align: center;
+  background-color: rgb(90, 107, 118);
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .12), 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.patreon__container {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.patreon__link {
+  text-decoration: underline;
+  color: #ff4242;
+}
