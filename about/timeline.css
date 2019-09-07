@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300,900|Raleway:300');
 
+.timeline a:link, .timeline a:visited, .timeline a:hover, .timeline a:active {
+  color:#fc4f02;
+}
+
 .timeline {
   --uiTimelineMainColor: var(--timelineMainColor, #fc4f02);
   --uiTimelineSecondaryColor: var(--timelineSecondaryColor, white);
